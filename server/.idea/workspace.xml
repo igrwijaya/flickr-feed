@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0abfdda2-8344-4534-8e2a-c79403950f9a" name="Default Changelist" comment="add simple test for the server app using mocha">
+    <list default="true" id="0abfdda2-8344-4534-8e2a-c79403950f9a" name="Default Changelist" comment="add AWS Lambda deployment configuration">
       <change afterPath="$PROJECT_DIR$/../client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/binaryMimeTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/deploy.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/next.server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/samconfig.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/serverless.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binaryMimeTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samconfig.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverless.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +151,8 @@
       <updated>1629512452613</updated>
       <workItem from="1629512454369" duration="10709000" />
       <workItem from="1629536408931" duration="1992000" />
-      <workItem from="1629538435037" duration="3735000" />
+      <workItem from="1629538435037" duration="4119000" />
+      <workItem from="1629543293426" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="restructure client and server folder, initialize server app using expressjs with typescript language">
       <created>1629512849263</created>
@@ -174,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629536444708</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add AWS Lambda deployment configuration">
+      <created>1629542500132</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629542500132</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +220,7 @@
     <MESSAGE value="restructure client and server folder, initialize server app using expressjs with typescript language" />
     <MESSAGE value="implement Flickr API" />
     <MESSAGE value="add simple test for the server app using mocha" />
-    <option name="LAST_COMMIT_MESSAGE" value="add simple test for the server app using mocha" />
+    <MESSAGE value="add AWS Lambda deployment configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="add AWS Lambda deployment configuration" />
   </component>
 </project>

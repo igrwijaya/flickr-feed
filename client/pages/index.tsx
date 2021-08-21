@@ -42,7 +42,7 @@ const Home: NextPage = () => {
                 alt="AIA Finance" />
           </Col>
           <Col className="align-self-center">
-            <h4>Hi, I'm Gede.</h4>
+            <h4>Hi, I&apos;m Gede.</h4>
             <p>igrwijaya@gmail.com</p>
           </Col>
         </Row>
