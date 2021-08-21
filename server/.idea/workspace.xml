@@ -3,23 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0abfdda2-8344-4534-8e2a-c79403950f9a" name="Default Changelist" comment="implement Flickr API">
       <change afterPath="$PROJECT_DIR$/../client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.state.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flickr/dto/FlickrImage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/infrastructure/stores/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/infrastructure/stores/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/infrastructure/api/flickr/flickr.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/infrastructure/api/flickr/flickr.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/layouts/DefaultLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/layouts/DefaultLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/flickr.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routes/flickr.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flickr/flickr.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/flickr/flickr.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629512452613</updated>
-      <workItem from="1629512454369" duration="6925000" />
+      <workItem from="1629512454369" duration="7187000" />
     </task>
     <task id="LOCAL-00001" summary="restructure client and server folder, initialize server app using expressjs with typescript language">
       <created>1629512849263</created>

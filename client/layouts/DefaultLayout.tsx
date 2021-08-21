@@ -1,16 +1,15 @@
 import {Button, Card, Container, FormControl, InputGroup} from "react-bootstrap";
 import React, {ReactNode, useEffect, useState} from "react";
+import {useDispatch} from "react-redux";
+import {fetchFlickrImage} from "../infrastructure/stores/flickr/flickr.action";
 
 const DefaultLayout = ({children} : {children: ReactNode}) => {
 
+    const dispatch = useDispatch()
     const [searchKeyword, setSearchKeyword] = useState<string>('')
 
-    useEffect(() => {
-        console.log(searchKeyword)
-    }, [searchKeyword])
-
     const onSearchBtnPressed = () => {
-
+        dispatch(fetchFlickrImage(searchKeyword))
     }
 
     return (
@@ -28,7 +27,7 @@ const DefaultLayout = ({children} : {children: ReactNode}) => {
                                 placeholder="keyword"
                             />
                             <InputGroup.Append>
-                                <Button variant="outline-secondary">Search</Button>
+                                <Button onClick={onSearchBtnPressed} variant="outline-secondary">Search</Button>
                             </InputGroup.Append>
                         </InputGroup>
                     </Container>

@@ -5,8 +5,16 @@ class FlickrApi extends BaseApi {
         super('flickr');
     }
 
-    fetchPublicImage(): Promise<any> {
-        const url = this.generateUrl('fetch-image');
+    fetchPublicImage(tags: string = ''): Promise<any> {
+        const params = [];
+
+        if(tags !== '') {
+            params.push({
+                tags: tags
+            })
+        }
+
+        const url = this.generateUrl('fetch-image', params);
 
         return this.getRequest(url);
     }
