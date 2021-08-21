@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0abfdda2-8344-4534-8e2a-c79403950f9a" name="Default Changelist" comment="implement Flickr API">
+    <list default="true" id="0abfdda2-8344-4534-8e2a-c79403950f9a" name="Default Changelist" comment="add simple test for the server app using mocha">
       <change afterPath="$PROJECT_DIR$/../client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binaryMimeTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samconfig.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverless.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -18,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,7 +59,45 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="flickr-feed:local" />
+          <option name="containerName" value="flickr-feed" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="80" />
+                <option name="hostPort" value="3002" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean-build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="clean-build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -78,60 +123,21 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Our application" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/test/tests.js</test-file>
-      <test-names>
-        <name value="Our application" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Our application.should return success response (1)" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/tests.js</test-file>
-      <test-names>
-        <name value="Our application" />
-        <name value="should return success response" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Our application.should return success response" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/tests.ts</test-file>
-      <test-names>
-        <name value="Our application" />
-        <name value="should return success response" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Mocha.App" />
+      <item itemvalue="Node.js.bin/www" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.clean-build" />
+      <item itemvalue="npm.test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.clean-build" />
         <item itemvalue="Mocha.App" />
-        <item itemvalue="Mocha.Our application.should return success response (1)" />
-        <item itemvalue="Mocha.Our application" />
-        <item itemvalue="Mocha.Our application.should return success response" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +150,8 @@
       <option name="presentableId" value="Default" />
       <updated>1629512452613</updated>
       <workItem from="1629512454369" duration="10709000" />
+      <workItem from="1629536408931" duration="1992000" />
+      <workItem from="1629538435037" duration="3735000" />
     </task>
     <task id="LOCAL-00001" summary="restructure client and server folder, initialize server app using expressjs with typescript language">
       <created>1629512849263</created>
@@ -159,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629515476473</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add simple test for the server app using mocha">
+      <created>1629536444708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629536444708</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,11 +205,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="restructure client and server folder, initialize server app using expressjs with typescript language" />
     <MESSAGE value="implement Flickr API" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement Flickr API" />
+    <MESSAGE value="add simple test for the server app using mocha" />
+    <option name="LAST_COMMIT_MESSAGE" value="add simple test for the server app using mocha" />
   </component>
 </project>

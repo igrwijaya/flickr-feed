@@ -1,18 +1,18 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require('cors');
-var dotenv = require('dotenv');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
+const dotenv = require('dotenv');
 
-var indexRouter = require('./routes/index');
-var flickrRouter = require('./routes/flickr');
+const indexRouter = require('./routes/index');
+const flickrRouter = require('./routes/flickr');
 
 dotenv.config()
 
-var app = express();
-var corsOrigin = process.env.CORS_ORIGINS!;
-var corsOptions = {
+const app = express();
+const corsOrigin = process.env.CORS_ORIGINS!;
+const corsOptions = {
     origin: corsOrigin.split(',')
 }
 

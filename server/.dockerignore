@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.github/
+.nuxt/
+build/
+static/
+test/
+.env/
+
+deploy.yml
+samconfig.toml
