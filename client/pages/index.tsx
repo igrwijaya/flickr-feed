@@ -19,7 +19,9 @@ const Home: NextPage = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchFlickrImage())
+    if(flickrData.status !== FlickrStatus.ready) {
+      dispatch(fetchFlickrImage())
+    }
   }, [])
 
   return (
@@ -58,7 +60,7 @@ const Home: NextPage = () => {
 
           {flickrData.status === FlickrStatus.ready && flickrData.publicImages.map((image, index) => (
               <Col key={index} sm={6} md={3} className="text-center mb-2 p-1">
-                <Image src={image.imageUrl} width={200} height={200} alt={image.title} />
+                <Image role="flickr-images" src={image.imageUrl} width={200} height={200} alt={image.title} />
               </Col>
           ))}
         </Row>

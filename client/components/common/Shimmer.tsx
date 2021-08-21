@@ -19,6 +19,7 @@ export const Shimmer = ({
 }) => {
     return (
         <div
+            role="shimmer"
             className={className + ' shimmer-effect'}
             style={{
                 width: width,
