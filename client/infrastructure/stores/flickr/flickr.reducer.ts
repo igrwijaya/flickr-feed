@@ -1,12 +1,13 @@
 import * as types from './flickr.types';
 import {FlickrStatus} from "./flickr.constant";
+import {FlickrState} from "./flickr.state";
 
-const initialState = {
-    status: FlickrStatus,
+const defaultState: FlickrState = {
+    status: FlickrStatus.searching,
     publicImages: []
 }
 
-const flickrReducer = (state = initialState, action: any = {}) => {
+const flickrReducer = (state: FlickrState = defaultState, action: any = {}) => {
     switch (action.type) {
         case types.API_EXECUTED:
             return {

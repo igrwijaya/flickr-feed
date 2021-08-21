@@ -2,13 +2,14 @@ import {useMemo} from 'react'
 import {applyMiddleware, createStore} from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {rootReducer} from "./reducer";
+import thunk from "redux-thunk";
 
 let store: any = null
 
 function initStore() {
     return createStore(
         rootReducer,
-        composeWithDevTools(applyMiddleware())
+        composeWithDevTools(applyMiddleware(thunk))
     )
 }
 

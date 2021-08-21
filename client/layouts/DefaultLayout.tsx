@@ -1,7 +1,18 @@
 import {Button, Card, Container, FormControl, InputGroup} from "react-bootstrap";
-import React, {ReactNode} from "react";
+import React, {ReactNode, useEffect, useState} from "react";
 
 const DefaultLayout = ({children} : {children: ReactNode}) => {
+
+    const [searchKeyword, setSearchKeyword] = useState<string>('')
+
+    useEffect(() => {
+        console.log(searchKeyword)
+    }, [searchKeyword])
+
+    const onSearchBtnPressed = () => {
+
+    }
+
     return (
         <>
             <Card>
@@ -12,6 +23,8 @@ const DefaultLayout = ({children} : {children: ReactNode}) => {
                         </span>
                         <InputGroup className="w-auto">
                             <FormControl
+                                value={searchKeyword}
+                                onChange={e => setSearchKeyword(e.target.value)}
                                 placeholder="keyword"
                             />
                             <InputGroup.Append>

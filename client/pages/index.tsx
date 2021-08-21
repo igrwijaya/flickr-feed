@@ -1,46 +1,32 @@
-import type { NextPage } from 'next'
+import type {NextPage} from 'next'
 import Image from 'next/image'
 import DefaultLayout from "../layouts/DefaultLayout";
 import {Col, Container, Row} from "react-bootstrap";
-import {useEffect, useState} from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
-
-interface Image {
-  url: string
-  alt: string
-}
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchFlickrImage} from "../infrastructure/stores/flickr/flickr.action";
+import {FlickrState} from "../infrastructure/stores/flickr/flickr.state";
+import Head from 'next/head'
 
 const Home: NextPage = () => {
 
-  const [images, setImages] = useState<Image[]>([])
+  const flickrData = useSelector(
+      (state: any) => state.flickr as FlickrState
+  )
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    const images: Image[] = []
-
-    images.push({
-      url: '/assets/images/logo-aia-insurance_169.png',
-      alt: 'AIA Finance'
-    })
-    images.push({
-      url: '/assets/images/logo-aia-insurance_169.png',
-      alt: 'AIA Finance'
-    })
-    images.push({
-      url: '/assets/images/logo-aia-insurance_169.png',
-      alt: 'AIA Finance'
-    })
-    setImages(images)
-
-    console.log(process.env.NEXT_PUBLIC_FLICKR_FEED_API!)
-
+    dispatch(fetchFlickrImage())
   }, [])
-
-  const fetchMoreData = () => {
-
-  }
 
   return (
     <DefaultLayout>
+      <Head>
+        <title>Flickr Feed App</title>
+        <meta name="description" content="Flickr Feed" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Container className="mt-3">
         <Row>
           <Col sm={3}>
@@ -57,20 +43,13 @@ const Home: NextPage = () => {
           </Col>
         </Row>
         <hr/>
-        <InfiniteScroll
-            dataLength={images.length}
-            next={fetchMoreData}
-            hasMore={images.length > 12}
-            loader={<h4>Loading...</h4>}
-        >
-          <Row className="mr-0 ml-0">
-            {images.map((image, index) => (
-                <Col key={index} sm={6} md={4} className="text-center mb-2 p-1">
-                  <Image src={image.url} width={150} height={150} alt={image.alt} />
-                </Col>
-            ))}
-          </Row>
-        </InfiniteScroll>
+        <Row className="mr-0 ml-0">
+          {flickrData.publicImages.map((image, index) => (
+              <Col key={index} sm={6} md={3} className="text-center mb-2 p-1">
+                <Image src={image.imageUrl} width={200} height={200} alt={image.title} />
+              </Col>
+          ))}
+        </Row>
       </Container>
     </DefaultLayout>
   )

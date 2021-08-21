@@ -5,8 +5,13 @@ const router = express.Router();
 
 router.get('/fetch-image', function(req: Request, res: Response, next: NextFunction) {
     const flickrService = new FlickrService();
+    let tagsQuery: any = '';
 
-    flickrService.fetchPublicImage()
+    if(req.query.hasOwnProperty('tags')) {
+        tagsQuery = req.query.tags;
+    }
+
+    flickrService.fetchPublicImage(tagsQuery)
         .then(response => {
             res.json({
                 success: response.success,
