@@ -9,9 +9,9 @@
 
 ### Backend Tech Stack
 - Web URL: https://d8jmmcey7igbk.cloudfront.net
-		- endpoint: 
-			- /flickr/fetch-image
-			- /flickr/fetch-image?tags={string,string,string...}
+- endpoint: 
+- /flickr/fetch-image
+- /flickr/fetch-image?tags={string,string,string...}
 - Framework: [ExpressJs](https://expressjs.com) (typescript, mocha unit test)
 - Deployment:
 	- AWS Lambda
