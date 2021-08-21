@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0abfdda2-8344-4534-8e2a-c79403950f9a" name="Default Changelist" comment="implement Flickr API">
       <change afterPath="$PROJECT_DIR$/../client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/components/common/Shimmer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/styles/_shimmer.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/infrastructure/api/flickr/flickr.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/infrastructure/api/flickr/flickr.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/infrastructure/stores/flickr/flickr.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/layouts/DefaultLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/layouts/DefaultLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../client/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

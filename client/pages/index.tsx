@@ -7,6 +7,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchFlickrImage} from "../infrastructure/stores/flickr/flickr.action";
 import {FlickrState} from "../infrastructure/stores/flickr/flickr.state";
 import Head from 'next/head'
+import {FlickrStatus} from "../infrastructure/stores/flickr/flickr.constant";
+import {Shimmer} from "../components/common/Shimmer";
 
 const Home: NextPage = () => {
 
@@ -44,7 +46,17 @@ const Home: NextPage = () => {
         </Row>
         <hr/>
         <Row className="mr-0 ml-0">
-          {flickrData.publicImages.map((image, index) => (
+          {flickrData.status === FlickrStatus.searching && (
+              <>
+                  {Array(16).fill('', 0, 15).map((value, index) =>
+                      <Col key={index} sm={6} md={3} className="text-center mb-2 p-1">
+                        <Shimmer width={200} height={200}/>
+                      </Col>
+                  )}
+              </>
+          )}
+
+          {flickrData.status === FlickrStatus.ready && flickrData.publicImages.map((image, index) => (
               <Col key={index} sm={6} md={3} className="text-center mb-2 p-1">
                 <Image src={image.imageUrl} width={200} height={200} alt={image.title} />
               </Col>
