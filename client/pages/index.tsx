@@ -31,6 +31,8 @@ const Home: NextPage = () => {
     })
     setImages(images)
 
+    console.log(process.env.NEXT_PUBLIC_FLICKR_FEED_API!)
+
   }, [])
 
   const fetchMoreData = () => {

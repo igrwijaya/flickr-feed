@@ -1,0 +1,2 @@
+export const API_EXECUTED = 'API_EXECUTED'
+export const API_SEARCHING = 'API_SEARCHING'
